@@ -1,192 +1,213 @@
-
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    overflow-x: hidden;
+    font-family:Arial,sans-serif;
+    background:white;
 }
 
-
-
-.cabecalho{
-    width: 120%;
-    height: 100px;
-
-    background-color: #ffffff;
-
-    display: flex;
-    align-items: center;
-
-    padding: 0 30px;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    z-index: 1000;
+.header{
+    width:100%;
+    background:white;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
 }
 
-.area-logo img{
-    height: 70px;
+.headerContainer{
+    width:90%;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 0;
 }
 
-nav{
-    margin-left: 50px;
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
 }
 
-.lista-menu{
-    display: flex;
-    list-style: none;
-    gap: 35px;
+.logoImg{
+    width:60px;
 }
 
-.lista-menu li a{
-    text-decoration: none;
-    color: #333;
-
-    font-size: 14px;
-    font-weight: 600;
-
-    transition: .3s;
+.menu{
+    display:flex;
+    gap:35px;
 }
 
-.lista-menu li a:hover{
-    color: #c40000;
+.menu a{
+    text-decoration:none;
+    color:#222;
+    font-weight:bold;
 }
 
+.banner{
+    width:100%;
+    height:700px;
 
-.secao-banner{
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+    position:relative;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    position: relative;
+    overflow:hidden;
 }
 
-.imagem-banner{
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    z-index: 0;
+.bannerImg{
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
-.overlay-banner{
-    position: absolute;
-    inset: 0;
+.bannerOverlay{
+    position:absolute;
 
-    background: rgba(0,0,0,0.25);
+    top:50%;
+    left:50%;
 
-    z-index: 1;
+    transform:translate(-50%,-50%);
+
+    text-align:center;
+
+    color:white;
 }
 
-.conteudo-banner{
-    position: relative;
-    z-index: 2;
-
-    text-align: center;
-    max-width: 800px;
-    padding: 20px;
+.bannerOverlay h1{
+    font-size:60px;
+    margin-bottom:20px;
 }
 
-.conteudo-banner h1{
-    color: white;
-
-    font-size: 42px;
-    font-weight: bold;
-
-    line-height: 1.2;
-
-    margin-bottom: 40px;
-
-    text-transform: uppercase;
+.bannerOverlay p{
+    font-size:22px;
+    margin-bottom:40px;
 }
 
-.botao-banner{
-    display: inline-block;
+.bannerBtn{
+    width:250px;
+    height:60px;
 
-    width: 180px;
-    height: 50px;
+    background:transparent;
 
-    line-height: 50px;
+    border:2px solid white;
 
-    text-decoration: none;
+    color:white;
 
-    border: 2px solid #ffffff;
+    font-size:18px;
+    font-weight:bold;
 
-    color: white;
-
-    font-size: 16px;
-    font-weight: 600;
-
-    transition: .3s;
+    cursor:pointer;
 }
 
-.botao-banner:hover{
-    background-color: white;
-    color: black;
+.conteudo{
+    width:80%;
+    margin:auto;
+
+    padding:80px 0;
 }
 
-
-@media(max-width: 900px){
-
-    .cabecalho{
-        flex-direction: column;
-        height: auto;
-        padding: 20px;
-    }
-
-    nav{
-        margin-left: 0;
-        margin-top: 15px;
-    }
-
-    .lista-menu{
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-
-    .conteudo-banner h1{
-        font-size: 32px;
-    }
+.conteudo h2{
+    font-size:55px;
+    margin-bottom:40px;
 }
 
-@media(max-width: 600px){
+.conteudoImg{
+    width:700px;
+    max-width:100%;
 
-    .area-logo img{
-        height: 55px;
-    }
+    display:block;
 
-    .lista-menu{
-        gap: 10px;
-    }
+    margin:auto;
 
-    .lista-menu li a{
-        font-size: 12px;
-    }
+    border-radius:12px;
 
-    .conteudo-banner h1{
-        font-size: 24px;
-    }
+    margin-bottom:50px;
+}
 
-    .botao-banner{
-        width: 150px;
-        height: 45px;
-        line-height: 45px;
-        font-size: 14px;
-    }
+.textoGrande{
+    width:100%;
+
+    font-size:22px;
+    line-height:1.9;
+
+    color:#444;
+}
+
+.textoGrande p{
+    margin-bottom:30px;
+}
+
+.galeria{
+    margin-top:70px;
+
+    display:flex;
+    justify-content:center;
+    gap:30px;
+
+    flex-wrap:wrap;
+}
+
+.galeriaImg{
+    width:350px;
+    height:250px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+}
+
+.paginaSimples{
+    width:80%;
+    margin:auto;
+
+    padding:100px 0;
+}
+
+.paginaSimples h1{
+    font-size:50px;
+    margin-bottom:25px;
+}
+
+.paginaSimples p{
+    font-size:22px;
+    color:#555;
+}
+
+@media(max-width:900px){
+
+.headerContainer{
+    flex-direction:column;
+    gap:20px;
+}
+
+.menu{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.banner{
+    height:500px;
+}
+
+.bannerOverlay h1{
+    font-size:38px;
+}
+
+.bannerOverlay p{
+    font-size:18px;
+}
+
+.conteudo h2{
+    font-size:38px;
+}
+
+.textoGrande{
+    font-size:18px;
+}
+
+.galeriaImg{
+    width:100%;
+}
 }
